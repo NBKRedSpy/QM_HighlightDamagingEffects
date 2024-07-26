@@ -1,0 +1,7 @@
+{
+    "UniqueModName": "nbk_redspy_QM_HighlightDamagingEffects",
+    "Assemblies": [
+        "QM_HighlightDamagingEffects.dll"
+    ],
+    "Dependencies": []
+}

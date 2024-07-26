@@ -1,0 +1,39 @@
+﻿Wound damage testing types:
+	--Console commands
+	wound blunt HumanHead
+	wound blunt HumanShoulder
+	wound pierce HumanThigh
+	wound fire HumanFeet 
+
+	--Data for reference
+	head_fracture	blunt		0	dot_dmg 4	vomiting 0.05 accuracy_reduce -0.2 los_reduce 1																			
+	shoulder_fracture	blunt		0	action_dmg 1	accuracy_reduce -0.15 melee_dmg_reduce -0.2																			
+	thigh_puncture	pierce	infectionEffect	1	apoint_dmg 2	run_unavailable 0																			
+	feet_burn	fire	infectionEffect	0.15	move_dmg 1	income_dmg 0.2																			
+
+
+
+
+
+
+Test: Init wound test.  - Tests wound from load and new wounds
+	Create wound on main screen
+
+	Expected:
+	Wound to be highlighted.
+
+Test: Stablize wound - Tests health window close event.
+
+	Stabalize a wound so it no longer causes damage.
+	Expected:  When exiting the health menu, the wound should not be highlighted.
+
+
+Test: Wound returns - Tests refresh even
+	Create one or more wounds and stabalized them.
+	Move around until a wound is not healed and starts doing damage again.
+
+	Expected: The wound panel should be highlighted.
+
+
+
+
