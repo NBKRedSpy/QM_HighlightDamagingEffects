@@ -11,7 +11,7 @@ The color can be changed in the configuration file.
 
 [h2]Game Difficulty[/h2]
 
-The game notifies a player that they are taking damage by flashing the wound and player as well as making a "crunching" sound.  The subtly of the notification my be a gameplay decision.
+The game notifies a player that they are taking damage by flashing the wound and player as well as making a "crunching" sound.  The subtly of the notification may be a gameplay decision.
 
 For example, in combat a person can be filled with so much adrenaline that they are unaware that they are wounded.
 
