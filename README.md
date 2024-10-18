@@ -1,5 +1,7 @@
 # Quasimorph Highlight Damaging Effects
 
+**Important**: The game's version .8 and higher now includes similar functionality.  This mod is no longer supported.
+
 ![thumbnail icon](media/thumbnail.png)
 
 Highlights the wound icon when it is causing damage.
