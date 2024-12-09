@@ -13,20 +13,19 @@ namespace QM_HighlightDamagingEffects
 {
     public static class Plugin
     {
-        public static string ModAssemblyName => Assembly.GetExecutingAssembly().GetName().Name;
-        public static string ConfigPath => Path.Combine(Application.persistentDataPath, ModAssemblyName, "config.json");
-        public static string ModPersistenceFolder => Path.Combine(Application.persistentDataPath, ModAssemblyName);
+        public static ConfigDirectories ConfigDirectories = new ConfigDirectories();
+
         public static ModConfig Config { get; private set; }
 
         [Hook(ModHookType.AfterConfigsLoaded)]
         public static void AfterConfig(IModContext context)
         {
-            Directory.CreateDirectory(ModPersistenceFolder);
+            Directory.CreateDirectory(ConfigDirectories.ModPersistenceFolder);
 
-            Config = ModConfig.LoadConfig(ConfigPath);
+            Config = ModConfig.LoadConfig(ConfigDirectories.ConfigPath);
             Config.Init();
 
-            new Harmony("nbk_redspy_" + ModAssemblyName).PatchAll();
+            new Harmony("nbk_redspy_" + ConfigDirectories.ModAssemblyName).PatchAll();
         }
 
 

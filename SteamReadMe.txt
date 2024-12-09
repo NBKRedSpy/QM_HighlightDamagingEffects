@@ -21,7 +21,7 @@ However, since I was checking the wound panels constantly, it is more of a QoL f
 
 [h1]Configuration[/h1]
 
-The configuration file will be created on the first game run and can be found at [i]%AppData%\..\LocalLow\Magnum Scriptum Ltd\Quasimorph\QM_HighlightDamagingEffects\config.json[/i].
+The configuration file will be created on the first game run and can be found at [i]%AppData%\..\LocalLow\Magnum Scriptum Ltd\Quasimorph_ModConfigs\QM_HighlightDamagingEffects\config.json[/i].
 [table]
 [tr]
 [td]Name
