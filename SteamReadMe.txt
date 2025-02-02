@@ -9,6 +9,10 @@ This mod highlights the wound boxes that are causing damage.
 
 The color can be changed in the configuration file.
 
+[h2]Known Issue[/h2]
+
+When fixing a wound, the wound highlight will not be updated until the player moves.
+
 [h2]Game Difficulty[/h2]
 
 The game notifies a player that they are taking damage by flashing the wound and player as well as making a "crunching" sound.  The subtly of the notification may be a gameplay decision.

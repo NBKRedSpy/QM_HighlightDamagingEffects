@@ -1,7 +1,5 @@
 # Quasimorph Highlight Damaging Effects
 
-**Important**: The game's version .8 and higher now includes similar functionality.  This mod is no longer supported.
-
 ![thumbnail icon](media/thumbnail.png)
 
 Highlights the wound icon when it is causing damage.
@@ -11,6 +9,9 @@ When in the middle of battle, it can be difficult to notice that a new -2 HP per
 This mod highlights the wound boxes that are causing damage.
 
 The color can be changed in the configuration file.
+
+## Known Issue
+When fixing a wound, the wound highlight will not be updated until the player moves.
 
 ## Game Difficulty
 The game notifies a player that they are taking damage by flashing the wound and player as well as making a "crunching" sound.  The subtly of the notification may be a gameplay decision.  
