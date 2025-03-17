@@ -2,6 +2,26 @@
 
 ![thumbnail icon](media/thumbnail.png)
 
+# Important - This version of the mod is only for the opt in beta version of the game!
+
+This is a temporary version that supports the 0.8.6 beta, and not the current game's version.
+For the non beta version of the game, use the mod of the same name without the BETA suffix.
+
+The non beta version *must* be uninstalled.  
+When the 0.8.6 becomes the main version, this mod will be deleted.
+Note that the beta is expected to change many times before release.
+As such, this mod may break on each beta release.
+
+
+# Mod Placeholder
+
+This is a temporary version which just inverts the colors so that yellow means wounds are not bandaged.
+In the short term, this will at least allow the users to have a much more visible indicator of wound damage.
+
+# Docs
+
+
+
 Highlights the wound icon when it is causing damage.
 
 When in the middle of battle, it can be difficult to notice that a new -2 HP per action point wound has been added to the existing wounds.
@@ -37,3 +57,8 @@ Thanks!
 
 # Source Code
 Source code is available on GitHub at https://github.com/NBKRedSpy/QM_HighlightDamagingEffects
+
+# Change Log
+## 1.1.0
+* Compatible with the 0.8.6 opt in beta 
+* Temporary version that inverts wound fixation colors

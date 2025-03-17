@@ -1,6 +1,23 @@
 [h1]Quasimorph Highlight Damaging Effects[/h1]
 
 
+[h1]Important - This version of the mod is only for the opt in beta version of the game![/h1]
+
+This is a temporary version that supports the 0.8.6 beta, and not the current game's version.
+For the non beta version of the game, use the mod of the same name without the BETA suffix.
+
+The non beta version [i]must[/i] be uninstalled.
+When the 0.8.6 becomes the main version, this mod will be deleted.
+Note that the beta is expected to change many times before release.
+As such, this mod may break on each beta release.
+
+[h1]Mod Placeholder[/h1]
+
+This is a temporary version which just inverts the colors so that yellow means wounds are not bandaged.
+In the short term, this will at least allow the users to have a much more visible indicator of wound damage.
+
+[h1]Docs[/h1]
+
 Highlights the wound icon when it is causing damage.
 
 When in the middle of battle, it can be difficult to notice that a new -2 HP per action point wound has been added to the existing wounds.
@@ -53,3 +70,11 @@ Thanks!
 [h1]Source Code[/h1]
 
 Source code is available on GitHub at https://github.com/NBKRedSpy/QM_HighlightDamagingEffects
+
+[h1]Change Log[/h1]
+
+[h2]1.1.0[/h2]
+[list]
+[*]Compatible with the 0.8.6 opt in beta
+[*]Temporary version that inverts wound fixation colors
+[/list]
