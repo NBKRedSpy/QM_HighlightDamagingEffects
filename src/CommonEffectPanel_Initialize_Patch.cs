@@ -33,13 +33,13 @@
 //                return;
 //            }
 
-//            SetColor(__instance, effect,  true);
+//            SetColor(__instance, effect, true);
 //        }
 
 //        public static void SetColor(CommonEffectPanel instance, BodyPartWound effect, bool showDamageColor)
 //        {
 
-//            if(showDamageColor)
+//            if (showDamageColor)
 //            {
 //                instance._bgCover.color = Plugin.Config.HighlightColorUnity;
 //            }
