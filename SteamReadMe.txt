@@ -72,12 +72,6 @@ Source code is available on GitHub at https://github.com/NBKRedSpy/QM_HighlightD
 
 [h2]1.1.0[/h2]
 [list]
-[*]Restored pre 0.8.6 highlighting
-[*]Fixed: Fixating a wound would not update the wound panel.
-[/list]
-
-[h2]1.1.0[/h2]
-[list]
 [*]Compatible with the 0.8.6 opt in beta
 [*]Temporary version that inverts wound fixation colors
 [/list]

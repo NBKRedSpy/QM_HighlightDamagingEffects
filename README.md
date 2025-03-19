@@ -47,7 +47,7 @@ Thanks!
 Source code is available on GitHub at https://github.com/NBKRedSpy/QM_HighlightDamagingEffects
 
 # Change Log
-## 1.1.0
+## 1.2.0
 * Restored pre 0.8.6 highlighting
 * Fixed: Fixating a wound would not update the wound panel.
 
