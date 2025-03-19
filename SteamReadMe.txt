@@ -11,24 +11,15 @@ When the 0.8.6 becomes the main version, this mod will be deleted.
 Note that the beta is expected to change many times before release.
 As such, this mod may break on each beta release.
 
-[h1]Mod Placeholder[/h1]
-
-This is a temporary version which just inverts the colors so that yellow means wounds are not bandaged.
-In the short term, this will at least allow the users to have a much more visible indicator of wound damage.
-
 [h1]Docs[/h1]
 
-Highlights the wound icon when it is causing damage.
+Highlights the bottom of the wound icon when when a wound is actively causing damage.
 
 When in the middle of battle, it can be difficult to notice that a new -2 HP per action point wound has been added to the existing wounds.
 
 This mod highlights the wound boxes that are causing damage.
 
 The color can be changed in the configuration file.
-
-[h2]Known Issue[/h2]
-
-When fixing a wound, the wound highlight will not be updated until the player moves.
 
 [h2]Game Difficulty[/h2]
 
@@ -72,6 +63,12 @@ Thanks!
 Source code is available on GitHub at https://github.com/NBKRedSpy/QM_HighlightDamagingEffects
 
 [h1]Change Log[/h1]
+
+[h2]1.1.0[/h2]
+[list]
+[*]Restored pre 0.8.6 highlighting
+[*]Fixed: Fixating a wound would not update the wound panel.
+[/list]
 
 [h2]1.1.0[/h2]
 [list]

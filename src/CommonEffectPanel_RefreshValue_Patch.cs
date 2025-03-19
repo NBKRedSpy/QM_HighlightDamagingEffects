@@ -1,42 +1,59 @@
-﻿//using HarmonyLib;
-//using MGSC;
-//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
-//using UnityEngine;
+﻿using HarmonyLib;
+using MGSC;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Policy;
+using System.Text;
+using System.Threading.Tasks;
+using UnityEngine;
 
-//namespace QM_HighlightDamagingEffects
-//{
+namespace QM_HighlightDamagingEffects
+{
 
 
-//    [HarmonyPatch(typeof(CommonEffectPanel), nameof(CommonEffectPanel.RefreshValue), typeof(List<IEffectWithView>))]
-//    public static class CommonEffectPanel_RefreshValue_Patch
-//    {
-//        public static HashSet<string> DamageTypes = new HashSet<string>()
-//        {
-//            "action_dmg",
-//            "apoint_dmg",
-//            "dot_dmg",
-//            "move_dmg"
-//        };
+    [HarmonyPatch(typeof(CommonEffectPanel), nameof(CommonEffectPanel.RefreshValue), typeof(List<IEffectWithView>))]
+    public static class CommonEffectPanel_RefreshValue_Patch
+    {
+        public static HashSet<Type> DamageTypes = new HashSet<Type>()
+        {
+        typeof(WoundEffectActionDamage),
+        typeof(WoundEffectActionPointDamage),
+        typeof(WoundEffectDotDamage),
+        typeof(WoundEffectMoveDamage)
+        };
 
-//        public static void Postfix(CommonEffectPanel __instance, List<IEffectWithView> effects)
-//        {
-//            bool hasDamagingWound = effects
-//                .Where(x => x is BodyPartWound)
-//                .Cast<BodyPartWound>()
-//                .Any(x => x.IsFixated == false && DamageTypes.Contains(x._woundTypeRecord.DamageType));
+        public static void Postfix(CommonEffectPanel __instance, List<IEffectWithView> effects)
+        {
+            SetColorForDamageTypes(__instance, effects);
+        }
 
-//            if (hasDamagingWound)
-//            {
-//                __instance._bgCover.color = Plugin.Config.HighlightColorUnity;
-//            }
-//            else
-//            {
-//                __instance._bgCover.color = (effects[0].IsRedView ? __instance._coverRedColor : __instance._coverGreenColor);
-//            }
-//        }
-//    }
-//}
+        /// <summary>
+        /// Sets the color of an effects view to the warning color if the effect pain
+        /// contains a wound that is not fixated and has a damaging effect.
+        /// </summary>
+        /// <param name="effectPanel">The GUI element</param>
+        /// <param name="effects">The effects (aka wounds, parks, etc.)</param>
+        public static void SetColorForDamageTypes(CommonEffectPanel effectPanel, List<IEffectWithView> effects)
+        {
+
+            if (effects.Count == 0)  return;
+
+            bool hasDamagingWound = effects
+                .Where(x => x is BodyPartWound && ((BodyPartWound)x).IsFixated == false)
+                .Cast<BodyPartWound>()
+                .Any(x => x.GetFixableWoundEffects()
+                    .Any(e => DamageTypes.Contains(e.GetType())))
+                ;
+
+            if (hasDamagingWound)
+            {
+                effectPanel._bgCover.color = Plugin.Config.HighlightColorUnity;
+            }
+            else
+            {
+                effectPanel._bgCover.color = (effects[0].IsRedView ? effectPanel._coverRedColor : effectPanel._coverGreenColor);
+            }
+        }
+    }
+}
