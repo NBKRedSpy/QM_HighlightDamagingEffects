@@ -33,7 +33,7 @@ namespace QM_HighlightDamagingEffects
         /// </summary>
         /// <param name="effectPanel">The GUI element</param>
         /// <param name="effects">The effects (aka wounds, parks, etc.)</param>
-        private static void SetColorForDamageTypes(CommonEffectPanel effectPanel, List<IEffectWithView> effects)
+        public static void SetColorForDamageTypes(CommonEffectPanel effectPanel, List<IEffectWithView> effects)
         {
             bool hasDamagingWound = effects
                 .Where(x => x is BodyPartWound && ((BodyPartWound)x).IsFixated == false)
