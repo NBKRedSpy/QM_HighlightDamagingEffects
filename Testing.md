@@ -1,13 +1,15 @@
 Wound example:
 
+wound's target assumes Human now.
 ```
-wound blunt HumanFeet
-wound lacer HumanShoulder
-wound blunt HumanThigh
+wound blunt Feet
+wound lacer Shoulder
+wound blunt Thigh
+
 
 itemx rags 10
-itemx sorbent 10
-itemx military_kit 10
+itemx pills_sorbent 10
+itemx medical_kit_2 10 
 ```
 
 

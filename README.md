@@ -2,16 +2,13 @@
 
 ![thumbnail icon](media/thumbnail.png)
 
-Highlights the wound icon when it is causing damage.
+Highlights the bottom of the wound icon when when a wound is actively causing damage.
 
 When in the middle of battle, it can be difficult to notice that a new -2 HP per action point wound has been added to the existing wounds.
 
 This mod highlights the wound boxes that are causing damage.
 
 The color can be changed in the configuration file.
-
-## Known Issue
-When fixing a wound, the wound highlight will not be updated until the player moves.
 
 ## Game Difficulty
 The game notifies a player that they are taking damage by flashing the wound and player as well as making a "crunching" sound.  The subtly of the notification may be a gameplay decision.  
@@ -26,7 +23,6 @@ However, since I was checking the wound panels constantly, it is more of a QoL f
 
 The configuration file will be created on the first game run and can be found at `%AppData%\..\LocalLow\Magnum Scriptum Ltd\Quasimorph_ModConfigs\QM_HighlightDamagingEffects\config.json`.
 
-
 |Name|Default|Description|
 |--|--|--|
 |HighlightColor|#FBE343|The highlighting color.  Defaults to the game's yellow color.  Must have the # prefix.|
@@ -37,3 +33,13 @@ Thanks!
 
 # Source Code
 Source code is available on GitHub at https://github.com/NBKRedSpy/QM_HighlightDamagingEffects
+
+# Change Log
+## 1.2.0
+* Restored pre 0.8.6 highlighting
+* Fixed: Fixating a wound would not update the wound panel.
+
+
+## 1.1.0
+* Compatible with the 0.8.6 opt in beta 
+* Temporary version that inverts wound fixation colors

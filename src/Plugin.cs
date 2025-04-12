@@ -24,7 +24,6 @@ namespace QM_HighlightDamagingEffects
 
             Config = ModConfig.LoadConfig(ConfigDirectories.ConfigPath);
             Config.Init();
-
             new Harmony("nbk_redspy_" + ConfigDirectories.ModAssemblyName).PatchAll();
         }
 
